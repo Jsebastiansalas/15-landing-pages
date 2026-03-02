@@ -1,0 +1,287 @@
+:root {
+    --text-primary: #382A20;
+    --text-secondary: #5C4D44;
+    --accent-yellow: #FDE17A;
+    --bg-brown: #493A31;
+    --bg-dark-shape: #382A20;
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.section {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.left {
+    flex: 1;
+    max-width: 520px;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+}
+
+.desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.boton {
+    background-color: var(--accent-yellow);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 14px 38px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-bottom: 70px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton:hover {
+    transform: scale(1.02);
+    background-color: #f7d55f;
+}
+
+.card {
+    background-color: var(--bg-brown);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 45px;
+    width: 100%;
+}
+
+.item {
+    color: #FFFFFF;
+}
+
+.item h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.item .line {
+    width: 25px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 10px 0 12px 0;
+    border-radius: 2px;
+}
+
+.item p {
+    font-size: 0.85rem;
+    color: #D7CCC6;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* ========== RIGHT CONTENT ========== */
+
+.right-content {
+    position: relative;
+    width: 550px;
+    height: 700px;
+    flex-shrink: 0;
+}
+
+.dark-box {
+    position: absolute;
+    width: 400px;
+    height: 480px;
+    background-color: var(--bg-dark-shape);
+    top: 130px;
+    right: -20px;
+    transform: rotate(18deg);
+    z-index: 1;
+    overflow: visible;
+}
+
+/* Diamond sparkles inside dark box */
+.sparkle {
+    position: absolute;
+}
+
+.sparkle-1 {
+    width: 50px;
+    height: 50px;
+    top: 60px;
+    right: 40px;
+    opacity: 0.9;
+}
+
+.sparkle-2 {
+    width: 35px;
+    height: 35px;
+    bottom: 100px;
+    left: 30px;
+    opacity: 0.7;
+}
+
+.yellow-box {
+    position: absolute;
+    width: 380px;
+    height: 460px;
+    background-color: var(--accent-yellow);
+    top: 60px;
+    right: 50px;
+    z-index: 2;
+}
+
+.heart-icon {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    fill: var(--bg-dark-shape);
+    top: 200px;
+    right: 100px;
+    z-index: 3;
+}
+
+.user-screen-image {
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    transform: rotate(-12deg);
+    z-index: 11;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== STARS ========== */
+
+.star {
+    position: absolute;
+}
+
+/* Dark 6-pointed star - top center */
+.star-xdark {
+    width: 120px;
+    height: 120px;
+    top: -10px;
+    left: 100px;
+    z-index: 5;
+    transform: rotate(-10deg);
+}
+
+/* Yellow spiky star - bottom right */
+.star-yb {
+    width: 140px;
+    height: 140px;
+    bottom: 20px;
+    right: -30px;
+    z-index: 5;
+    transform: rotate(10deg);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 1050px) {
+    .section {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 70px;
+    }
+
+    .left {
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-content {
+        margin-top: 60px;
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .desc {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 30px;
+    }
+
+    .right-content {
+        transform: scale(0.6);
+        margin-top: -60px;
+        margin-bottom: -100px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .desc {
+        font-size: 0.85rem;
+    }
+
+    .boton {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .item h2 {
+        font-size: 1.2rem;
+    }
+
+    .right-content {
+        transform: scale(0.45);
+        margin-top: -120px;
+        margin-bottom: -180px;
+    }
+}
