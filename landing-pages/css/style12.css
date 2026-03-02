@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    text-align: left;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #333;
+    margin: 0 0 10px 0;
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    left: 7rem;
+    z-index: 10;
+}
+
+p {
+    color: #666;
+    margin: 0 0 20px 0;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 19rem;
+    left: 7rem;
+    z-index: 10;
+}
+
+.boton {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    top: 29rem;
+    left: 7rem;
+    z-index: 10;
+}
+
+.boton:hover {
+    background-color: #333;
+}
+
+.decoracion {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 5;
+    max-width: 100%;
+    height: auto;
+}
+
+.lineas {
+    top: 3rem;
+    left: 42rem;
+    width: 24rem;
+}
+
+.spiral {
+    top: 37rem;
+    left: 16rem;
+    width: 9rem;
+}
+
+.estrella {
+    position: absolute;
+    bottom: -7rem;
+    right: 12rem;
+    width: 10rem;
+    z-index: 1;
+}
+
+.estrella2 {
+    position: absolute;
+    bottom: -20rem;
+    right: -20rem;
+    width: 10rem;
+    z-index: 1;
+}
+
+.imagen1 {
+    position: absolute;
+    top: 4rem;
+    left: 90rem;
+    width: 20rem;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.imagen2 {
+    position: absolute;
+    top: 15rem;
+    left: 67rem;
+    width: 20rem;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.imagen3 {
+    position: absolute;
+    top: 27rem;
+    left: 43rem;
+    width: 20rem;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.ellipse {
+    position: absolute;
+    bottom: -18rem;
+    right: 18rem;
+    width: 50px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.texto {
+    position: absolute;
+    top: 50rem;
+    left: 70rem;
+    color: #666;
+    text-align: left;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        top: 2rem;
+        left: 3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        top: 12rem;
+        left: 3rem;
+    }
+
+    .boton {
+        top: 19rem;
+        left: 3rem;
+    }
+
+    .imagen1 {
+        left: 55rem;
+        width: 16rem;
+    }
+
+    .imagen2 {
+        left: 40rem;
+        width: 16rem;
+    }
+
+    .imagen3 {
+        left: 25rem;
+        width: 16rem;
+    }
+
+    .lineas {
+        left: 28rem;
+        width: 18rem;
+    }
+
+    .spiral {
+        left: 10rem;
+        width: 7rem;
+    }
+
+    .decoracion {
+        width: 15%;
+    }
+
+    .estrella,
+    .estrella2 {
+        width: 7rem;
+    }
+
+    .ellipse {
+        right: 10rem;
+    }
+
+    .texto {
+        left: 40rem;
+        top: 42rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        align-items: flex-start;
+    }
+
+    .contenedor {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        top: 9rem;
+        left: 2rem;
+        max-width: 90%;
+    }
+
+    p br {
+        display: none;
+    }
+
+    .boton {
+        top: 16rem;
+        left: 2rem;
+    }
+
+    .imagen1 {
+        top: 22rem;
+        left: 55%;
+        width: 40%;
+    }
+
+    .imagen2 {
+        top: 30rem;
+        left: 30%;
+        width: 40%;
+    }
+
+    .imagen3 {
+        top: 38rem;
+        left: 5%;
+        width: 40%;
+    }
+
+    .lineas {
+        left: 50%;
+        width: 40%;
+        top: 1rem;
+    }
+
+    .spiral {
+        top: 48rem;
+        left: 5rem;
+        width: 5rem;
+    }
+
+    .estrella,
+    .estrella2 {
+        display: none;
+    }
+
+    .ellipse {
+        display: none;
+    }
+
+    .texto {
+        top: 52rem;
+        left: 2rem;
+        font-size: 0.85rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        left: 1.5rem;
+        top: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        top: 7.5rem;
+        left: 1.5rem;
+    }
+
+    .boton {
+        top: 13rem;
+        left: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .imagen1 {
+        top: 18rem;
+        left: 50%;
+        width: 45%;
+    }
+
+    .imagen2 {
+        top: 24rem;
+        left: 25%;
+        width: 45%;
+    }
+
+    .imagen3 {
+        top: 30rem;
+        left: 2%;
+        width: 45%;
+    }
+
+    .lineas {
+        display: none;
+    }
+
+    .spiral {
+        display: none;
+    }
+
+    .texto {
+        top: 40rem;
+        left: 1.5rem;
+    }
+}
