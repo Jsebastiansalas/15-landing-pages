@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0e2a;
+    color: #fff;
+}
+
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 50px 50px 30px;
+    gap: 20px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 380px;
+}
+
+.titulo h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.titulo p {
+    font-size: 14px;
+    line-height: 1.7;
+  color: rgba(255,255,255,0.65);
+}
+
+.boton {
+    padding: 12px 34px;
+    background: #fff;
+    color: #0a0e2a;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.boton:hover {
+    background: #ddd;
+}
+
+
+.fotos-derecha {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circulo-derecha,
+.circle-img {
+    overflow: hidden;
+    background: transparent;
+}
+
+.circulo-derecha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tall {
+    width: 180px;
+    height: 220px;
+    border-radius: 100px;
+}
+
+.circulo {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+
+.section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 30px 50px;
+    gap: 40px;
+}
+
+.middle-left img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.line {
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 4px;
+}
+
+.step h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.step p {
+    font-size: 13px;
+  color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+}
+
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 10px 50px 50px;
+}
+
+.gallery-item {
+    border-radius: 14px;
+    overflow: hidden;
+    height: 180px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1000px) {
+    .section {
+        grid-template-columns: 1fr;
+        padding: 40px 30px 20px;
+        text-align: center;
+    }
+
+    .titulo {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .fotos-derecha {
+        justify-content: center;
+    }
+
+    .section2 {
+        grid-template-columns: 1fr;
+        padding: 20px 30px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 30px 30px;
+    }
+
+    .gallery-item:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 700px) {
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .tall {
+        width: 140px;
+        height: 170px;
+    }
+
+    .circulo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item:last-child {
+        grid-column: span 1;
+    }
+
+    .gallery-item {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 30px 15px 15px;
+    }
+
+    .titulo h1 {
+        font-size: 24px;
+    }
+
+    .titulo p {
+        font-size: 13px;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tall {
+        width: 100px;
+        height: 130px;
+    }
+
+    .circulo {
+        width: 120px;
+        height: 120px;
+        margin-top: 15px;
+    }
+
+    .section2 {
+        padding: 15px;
+    }
+
+    .middle-left img {
+        height: 160px;
+    }
+
+    .galeria {
+        padding: 10px 15px 30px;
+    }
+
+    .gallery-item {
+        height: 120px;
+    }
+}
